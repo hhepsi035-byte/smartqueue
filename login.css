@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("blob-haikei.png");
+  background-position:0dvb;
+  background-size: cover;
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ==========================================
+   BLOOMING MOTION NAVBAR (EXACT REFERENCE CODE)
+   ========================================== */
+.navbar {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.navbar #toggle {
+  display: none;
+}
+
+.center-btn {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: #4d5ca7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.center-btn:hover {
+  transform: scale(1.08);
+}
+
+/* ROTATE BUTTON ON TOGGLE */
+.navbar #toggle:checked ~ .center-btn {
+  transform: rotate(360deg);
+  background: #6d28d9;
+}
+
+/* NAV ITEMS MOTION ANIMATION */
+.nav-items {
+  position: absolute;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-items li {
+  position: absolute;
+  left: 0;
+  transition: 0.5s ease;
+  transition-delay: calc(0.1s * var(--i));
+  transform: rotate(0deg) translateX(0px);
+  transform-origin: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* SPREAD / BLOOM OUT MOTION WHEN CHECKED */
+.navbar #toggle:checked ~ .nav-items li {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navbar #toggle:checked ~ .nav-items li:nth-child(1) {
+  transform: rotate(0deg) translateX(-140px);
+}
+
+.navbar #toggle:checked ~ .nav-items li:nth-child(2) {
+  transform: rotate(0deg) translateX(-70px);
+}
+
+.navbar #toggle:checked ~ .nav-items li:nth-child(3) {
+  transform: rotate(0deg) translateX(70px);
+}
+
+.navbar #toggle:checked ~ .nav-items li:nth-child(4) {
+  transform: rotate(0deg) translateX(140px);
+}
+
+/* LINK & ICON STYLING INSIDE MOTION MENU */
+.nav-items li a {
+  width: 50px;
+  height: 50px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.nav-items li a span {
+  font-size: 9px;
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.nav-items li a:hover {
+  background: #3a5eed;
+  transform: scale(1.15);
+}
+
+
+/* ==========================================
+   LOGIN CARD & FORM STYLING
+   ========================================== */
+.login-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 40px; /* Top padding leaves space for navbar */
+}
+
+.login-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.subtitle-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(58, 91, 237, 0.2);
+  border: 1px solid rgba(58, 58, 237, 0.4);
+  color: #8b8bfa;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.login-header h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.caption-settings {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.input-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field i {
+  position: absolute;
+  left: 14px;
+  color: #64748b;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-field input::placeholder {
+  color: #64748b;
+}
+
+.input-field input:focus {
+  border-color: #3d3aed;
+  background: rgba(64, 58, 237, 0.05);
+  box-shadow: 0 0 10px rgba(58, 58, 237, 0.3);
+}
+
+.input-field input:focus + i,
+.input-field:focus-within i {
+  color: #3a3aed;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+  accent-color: #3a40ed;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.forgot-link {
+  color: #8b9afa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+  color: #b5befd;
+  text-decoration: underline;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background: #3a43ed;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(58, 58, 237, 0.4);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background: #3a28d9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(58, 70, 237, 0.6);
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.login-footer a {
+  color: #8ba5fa;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-footer a:hover {
+  color: #b5c6fd;
+  text-decoration: underline;
+}

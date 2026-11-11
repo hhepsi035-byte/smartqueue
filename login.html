@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - SmartQueue</title>
+  
+  <!-- Font Awesome Icons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <!-- NAVBAR WITH BLOOMING MOTION EFFECT -->
+  <nav class="navbar">
+    <input type="checkbox" id="toggle" />
+    <label for="toggle" class="center-btn">
+      <i class="fa-solid fa-shield-halved"></i>
+    </label>
+
+    <ul class="nav-items">
+      <li style="--i:1;">
+        <a href="index.html">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li style="--i:2;">
+        <a href="index.html">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back</span>
+        </a>
+      </li>
+      <li style="--i:3;">
+        <a href="register.html">
+          <i class="fa-solid fa-user-plus"></i>
+          <span>Register</span>
+        </a>
+      </li>
+      <li style="--i:4;">
+        <a href="forgot.html">
+          <i class="fa-solid fa-key"></i>
+          <span>Reset</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- LOGIN CONTAINER -->
+  <main class="login-wrapper">
+    <div class="login-card">
+
+      <div class="login-header">
+        <div class="subtitle-badge">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>SECURE PORTAL ACCESS</span>
+        </div>
+        <h2>Welcome Back</h2>
+        <p class="caption-settings">Enter your account credentials to manage your queue and appointments</p>
+      </div>
+
+      <form class="login-form" action="login.php" method="POST">
+        
+        <div class="form-group">
+          <label for="username">Username</label>
+          <div class="input-field">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-field">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <label class="remember-me">
+            <input type="checkbox" /> Remember me
+          </label>
+          <a href="forgot.html" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          Login <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+      </form>
+
+      <div class="login-footer">
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

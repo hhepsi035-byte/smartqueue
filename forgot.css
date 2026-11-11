@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   1. GLOBAL RESETS & BACKGROUND
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("blob-haikei.png");
+  background-position: 0dvb;
+  background-size: cover;
+  color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+/* Top Floating Shield Badge */
+.portal-icon-container {
+  width: 52px;
+  height: 52px;
+  background-color: #525eff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -26px; /* Overlaps top of the main container */
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(82, 111, 255, 0.4);
+}
+
+.portal-icon-container i {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+/* ==========================================
+   2. MAIN CARD CONTAINER (.container)
+   ========================================== */
+.container {
+  background-color: #16192b; /* Dark navy portal box */
+  width: 100%;
+  max-width: 440px;
+  padding: 45px 35px 35px 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ==========================================
+   3. HEADER & BADGES (.subtitle, .title, .description)
+   ========================================== */
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: rgba(82, 97, 255, 0.2);
+  color: #5568f7;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+/* ==========================================
+   4. FORM & INPUT FIELDS
+   ========================================== */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: #f1f5f9;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:focus {
+  background-color: #ffffff;
+  border-color: #5255ff;
+  box-shadow: 0 0 0 3px rgba(82, 97, 255, 0.25);
+}
+
+/* ==========================================
+   5. BUTTON (.btn-submit)
+   ========================================== */
+.btn-submit {
+  width: 100%;
+  padding: 13px;
+  margin-top: 8px;
+  background: linear-gradient(135deg, #5261ff 0%, #637bf1 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(82, 108, 255, 0.4);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-submit:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* ==========================================
+   6. FOOTER TEXT LINK (.footer-text)
+   ========================================== */
+.footer-text {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 12px;
+  color: #94a3b8;
+  width: 100%;
+}
+
+.footer-text a {
+  color: #5565f7;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}

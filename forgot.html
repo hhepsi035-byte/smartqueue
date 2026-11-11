@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - SmartQueue</title>
+    <!-- Font Awesome CDN for Shield Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="forgot.css">
+</head>
+<body>
+
+    <!-- Top Overlapping Shield Icon -->
+    <div class="portal-icon-container">
+        <i class="fa-solid fa-shield-halved"></i>
+    </div>
+
+    <!-- Main Card Container -->
+    <div class="container">
+        <p class="subtitle">Password Recovery</p>
+        <h2 class="title">Reset Password</h2>
+        <p class="description">Enter your username and registered mobile number to receive a verification OTP.</p>
+
+        <form action="forgot.php" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Mobile Number or Email ID</label>
+                <input type="text" id="contact" name="contact" placeholder="Enter mobile number or email" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Send OTP &rarr;</button>
+        </form>
+
+        <p class="footer-text">Remember your password? <a href="login.html">Login here</a></p>
+    </div>
+
+</body>
+</html>

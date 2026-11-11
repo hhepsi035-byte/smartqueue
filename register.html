@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - SmartQueue</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+   <nav class="navbar">
+  <input type="checkbox" id="toggle" />
+  <label for="toggle" class="center-btn">
+    <!-- Ensure this icon tag is present -->
+    <i class="fa-solid fa-shield-halved"></i>
+  </label>
+
+  <ul class="nav-items">
+    <li style="--i: 1">
+      <a href="index.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+    </li>
+    <li style="--i: 2">
+      <a href="javascript:history.back()">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back</span>
+      </a>
+    </li>
+    <li style="--i: 3">
+      <a href="register.html">
+        <i class="fa-solid fa-user-plus"></i>
+        <span>Register</span>
+      </a>
+    </li>
+    <li style="--i: 4">
+      <a href="reset.html">
+        <i class="fa-solid fa-key"></i>
+        <span>Reset</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+  
+
+  <!-- REGISTER CONTAINER -->
+  <main class="register-wrapper">
+    <div class="register-card">
+      
+      <div class="register-header">
+        <div class="subtitle-badge">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>CREATE AN ACCOUNT</span>
+        </div>
+        <h2>Get Started</h2>
+        <p class="caption-settings">Register to book appointments, receive OTP updates, and manage queue tokens.</p>
+      </div>
+
+      <form class="register-form" action="register.php" method="POST">
+        <!-- Username Field -->
+        <div class="form-group">
+          <label for="username">Username</label>
+          <div class="input-field">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="username" name="username" placeholder="Choose a username" required />
+          </div>
+        </div>
+
+        <!-- Mobile Number or Email ID Field -->
+        <div class="form-group">
+          <label for="contact">Mobile Number or Email ID</label>
+          <div class="input-field">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="text" name="contact" placeholder="Number or Email">
+          </div>
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-field">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Create a strong password" required />
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-submit">
+          Send OTP & Register <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+
+      <div class="auth-footer">
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
